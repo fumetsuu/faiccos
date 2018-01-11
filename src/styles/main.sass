@@ -1,7 +1,3 @@
-@font-face
-    font-family: 'Voyage'
-    src: url('../assets/Voyage Regular.otf')
-
 @import 'vars'
 
 body
@@ -22,6 +18,16 @@ a
     background-repeat: no-repeat
     margin: 0 auto
 
+.parallax-bg
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1000
+
+.bg-inv
+    background: transparent
+
 .main-nav
     position: absolute
     width: 100%
@@ -39,8 +45,8 @@ a
     .nav-item
         margin: 0 15px
         text-transform: uppercase
-        font-size: 12px
-        font-family: 'Raleway'
+        font-size: 14px
+        font-family: 'Assistant'
         transition: 0.2s
     
     .nav-link
@@ -51,8 +57,8 @@ a
     .dropdown-menu
         background-color: transparent
         border: none
-        font-size: 12px
-        font-family: 'Raleway'
+        font-size: 14px
+        font-family: 'Assistant'
         padding: 0
         
         .dropdown-item
@@ -101,6 +107,26 @@ a
         .subtitle
             font-size: 1rem
             letter-spacing: 0.5rem
+
+=float-containers
+    width: 90%
+    margin-top: -50px
+    position: relative
+    overflow: visible
+
+=float-containers-after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    
+.rescontainer
+    +float-containers
+
+.rescontainer::after
+    +float-containers-after
 
 #resabout
     height: auto
@@ -177,10 +203,9 @@ a
             height: auto
 
 .spec-background
-    height: 500px
+    height: 600px
     background-image: url("../assets/bg-2.jpg")
-    background-size: cover
-    background-repeat: no-repeat
+    margin-top: -50px
 
     .specialties
         color: white
@@ -189,12 +214,18 @@ a
         letter-spacing: 0.8rem
         font-size: 3rem
         text-align: center
-        line-height: 500px
+        line-height: 600px
 
     @media (max-width: 575px)
         .specialties
             letter-spacing: 0.3rem
             font-size: 1.5rem
+
+.speccontainer
+    +float-containers
+
+.speccontainer::after
+    +float-containers-after
 
 #spec-display
     height: auto
@@ -213,8 +244,7 @@ a
         background-color: $lighter-grey
 
         .spec-title
-            font-family: 'Archivo Black'
-            font-weight: 800
+            font-family: 'Assistant'
             text-transform: uppercase
             font-size: 20px
             margin-top: 25px
@@ -243,7 +273,7 @@ a
     @media (max-width: 575px)
         .spec-image
             display: none
-            
+
         .spec-text
             background-color: rgba(0,0,0,0.6)
             color: white
@@ -260,7 +290,7 @@ a
             width: 100%
             position: absolute
             left: 0
-            z-index: -1000
+            z-index: -1
 
         .sm-img-lasagna
             background-image: url("../assets/lasagna.jpg")
@@ -278,12 +308,18 @@ a
         .spec-text
             font-size: 13px
 
+@media (max-width: 575px)
+    .spec-background
+        position: relative
+
+    .pre-menu-background
+        position: relative
+
+
 .pre-menu-background
-    height: 400px
+    height: 600px
     background-image: url("../assets/bg-3.jpg")
-    background-size: cover
-    background-position-y: center
-    background-repeat: no-repeat
+    margin-top: -50px
     
     .food
         color: white
@@ -292,7 +328,7 @@ a
         letter-spacing: 0.8rem
         font-size: 3rem
         text-align: center
-        line-height: 400px
+        line-height: 600px
 
     @media (max-width: 575px)
         .food
@@ -301,7 +337,7 @@ a
 
 .menu-container-fluid
     padding: 0 !important
-    overflow: auto
+    overflow: hidden
 
 .menu-bg
     background-image: url("../assets/bg-menu.jpg")
@@ -331,11 +367,11 @@ a
 
 .menu-container
     padding: 0 8% 0 12%
+    overflow: hidden
 
     #menu
         height: auto
         margin: 0 auto
-        overflow: auto
         text-align: center
         color: $grey
         overflow: hidden
@@ -425,3 +461,109 @@ a
     letter-spacing: 1px
     text-align: center
     line-height: 50px
+
+// anim overrides
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+.fadeIn
+    animation: fadeIn 2s
+
+@keyframes fadeInUp
+    0%
+        opacity: 0
+        transform: translate3d(0, 70%, 0)
+    60%
+        opacity: 1
+    100%
+        transform: none
+
+.fadeInUp
+    animation: fadeInUp 1s
+
+@keyframes fadeInDown
+    0%
+        opacity: 0
+        transform: translate3d(0, -70%, 0)
+    60%
+        opacity: 1
+    100%
+        transform: none
+
+.fadeInDown
+    animation: fadeInDown 1s
+
+@keyframes fadeInLeft
+    0%
+        opacity: 0
+        transform: translate3d(-50%, 0, 0)
+    60%
+        opacity: 1
+    100%
+        transform: none
+
+.fadeInLeft
+    animation: fadeInLeft 1s
+
+@keyframes fadeInRight
+    0%
+        opacity: 0
+        transform: translate3d(50%, 0, 0)
+    60%
+        opacity: 1
+    100%
+        transform: none
+
+.fadeInRight
+    animation: fadeInRight 1s
+
+@keyframes fadeInTopLeft
+    0%
+        opacity: 0
+        transform: translate3d(-20%, -40%, 0)
+    60%
+        opacity: 1
+    100%
+        transform: none
+
+.fadeInTopLeft
+    animation: fadeInTopLeft 1s
+
+@keyframes fadeInTopRight
+    0%
+        opacity: 0
+        transform: translate3d(20%, -40%, 0)
+    60%
+        opacity: 1
+    100%
+        transform: none
+
+.fadeInTopRight
+    animation: fadeInTopRight 1s
+
+@keyframes fadeInBottomLeft
+    0%
+        opacity: 0
+        transform: translate3d(-20%, 40%, 0)
+    60%
+        opacity: 1
+    100%
+        transform: none
+
+.fadeInBottomLeft
+    animation: fadeInBottomLeft 1s
+
+@keyframes fadeInBottomRight
+    0%
+        opacity: 0
+        transform: translate3d(20%, 40%, 0)
+    60%
+        opacity: 1
+    100%
+        transform: none
+
+.fadeInBottomRight
+    animation: fadeInBottomRight 1s
