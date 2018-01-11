@@ -1,0 +1,508 @@
+@font-face {
+  font-family: 'Voyage';
+  src: url("../assets/Voyage Regular.otf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #b59873;
+}
+
+.cheap-spacer {
+  height: 280px;
+  width: 280px;
+  background-image: url("../assets/seperatoe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.main-nav {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), transparent) !important;
+}
+
+.main-nav .navbar-brand {
+  color: white !important;
+  font-family: 'Voyage';
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.main-nav .navbar-toggler {
+  background-color: white;
+}
+
+.main-nav .nav-item {
+  margin: 0 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'Raleway';
+  transition: 0.2s;
+}
+
+.main-nav .nav-link {
+  color: white !important;
+}
+
+.main-nav .nav-link:hover {
+  color: #b59873 !important;
+}
+
+.main-nav .dropdown-menu {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  font-family: 'Raleway';
+  padding: 0;
+}
+
+.main-nav .dropdown-menu .dropdown-item {
+  color: white;
+  padding: 0;
+  margin: 0 0 10px 10px;
+}
+
+.main-nav .dropdown-menu .dropdown-item:hover {
+  background-color: transparent;
+  color: #b59873;
+}
+
+#landing-page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#landing-page .landing-background {
+  background-image: url("../assets/main-bg.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  width: 100%;
+  height: 100%;
+}
+
+#landing-page .faiccos {
+  color: white;
+  font-family: 'Voyage';
+  font-size: 8rem;
+  text-align: center;
+  margin-top: 30vh;
+  margin-bottom: -40px;
+}
+
+#landing-page .subtitle {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Karla';
+  letter-spacing: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+@media (max-width: 500px) {
+  #landing-page .faiccos {
+    font-size: 6rem;
+  }
+  #landing-page .subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+#resabout {
+  height: auto;
+  color: #3a3a3a;
+}
+
+#resabout .reservation-text {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  height: 350px;
+  background-color: #faf9f7;
+}
+
+#resabout .reservation-text p {
+  margin: 20px;
+  font-family: 'Catamaran';
+}
+
+#resabout .header-title {
+  font-family: 'Voyage';
+  font-size: 50px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+#resabout .book-table {
+  margin: 10px 0 30px 0;
+  border: 3px solid #c7b194;
+  text-transform: uppercase;
+  color: #b59873;
+  letter-spacing: 1.5px;
+  font-family: 'Assistant';
+  padding: 10px 30px;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+#resabout .book-table:hover {
+  cursor: pointer;
+  border-color: #b59873;
+  background-color: #b59873 !important;
+  color: white;
+}
+
+#resabout .reservation-img {
+  background-image: url("../assets/image-1.jpg");
+  background-size: cover;
+  background-position-y: center;
+  height: 350px;
+}
+
+#resabout .about-text {
+  padding: 0 20px;
+  margin: 0;
+  text-align: center;
+  height: auto;
+  background-color: #faf9f7;
+}
+
+#resabout .about-text p {
+  margin: 20px;
+  font-family: 'Catamaran';
+}
+
+#resabout .about-img {
+  background-image: url("../assets/image-2.jpg");
+  background-size: cover;
+  background-position-y: center;
+  height: 350px;
+}
+
+@media (min-width: 575px) and (max-width: 768px) {
+  #resabout .about-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  #resabout .reservation-img {
+    display: none;
+  }
+  #resabout .about-img {
+    display: none;
+  }
+  #resabout .reservation-text {
+    height: auto;
+  }
+}
+
+.spec-background {
+  height: 500px;
+  background-image: url("../assets/bg-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.spec-background .specialties {
+  color: white;
+  font-family: 'Karla';
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 500px;
+}
+
+@media (max-width: 575px) {
+  .spec-background .specialties {
+    letter-spacing: 0.3rem;
+    font-size: 1.5rem;
+  }
+}
+
+#spec-display {
+  height: auto;
+  color: #3a3a3a;
+}
+
+#spec-display .spec-image {
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+#spec-display .spec-text {
+  margin: 0;
+  text-align: center;
+  height: 250px;
+  background-color: #faf9f7;
+}
+
+#spec-display .spec-text .spec-title {
+  font-family: 'Archivo Black';
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+#spec-display .spec-text p {
+  margin: 12px;
+  font-family: 'Catamaran';
+}
+
+#spec-display .spec-text .from-price {
+  font-family: 'Assistant';
+  color: #b59873;
+  text-transform: uppercase;
+}
+
+#spec-display .lasagna-image {
+  background-image: url("../assets/lasagna.jpg");
+}
+
+#spec-display .eggplant-image {
+  background-image: url("../assets/eggplant.jpg");
+}
+
+#spec-display .braciole-image {
+  background-image: url("../assets/braciole.jpg");
+}
+
+#spec-display .spaghetti-image {
+  background-image: url("../assets/spaghetti.jpg");
+}
+
+@media (max-width: 575px) {
+  #spec-display .spec-image {
+    display: none;
+  }
+  #spec-display .spec-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    height: 300px;
+  }
+  #spec-display .spec-text .spec-title {
+    margin: 65px 0 0 0;
+  }
+  #spec-display .sm-img {
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1000;
+  }
+  #spec-display .sm-img-lasagna {
+    background-image: url("../assets/lasagna.jpg");
+  }
+  #spec-display .sm-img-eggplant {
+    background-image: url("../assets/eggplant.jpg");
+  }
+  #spec-display .sm-img-braciole {
+    background-image: url("../assets/braciole.jpg");
+  }
+  #spec-display .sm-img-spaghetti {
+    background-image: url("../assets/spaghetti.jpg");
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  #spec-display .spec-text {
+    font-size: 13px;
+  }
+}
+
+.pre-menu-background {
+  height: 400px;
+  background-image: url("../assets/bg-3.jpg");
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.pre-menu-background .food {
+  color: white;
+  font-family: 'Karla';
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 400px;
+}
+
+@media (max-width: 575px) {
+  .pre-menu-background .food {
+    letter-spacing: 0.3rem;
+    font-size: 1.5rem;
+  }
+}
+
+.menu-container-fluid {
+  padding: 0 !important;
+  overflow: auto;
+}
+
+.menu-bg {
+  background-image: url("../assets/bg-menu.jpg");
+  height: 1050px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: -1000;
+}
+
+.menu-title {
+  text-align: center;
+  font-family: 'Voyage';
+  font-size: 3rem;
+  margin: 50px auto;
+  width: 100px;
+  position: relative;
+  border-bottom: 1px solid #b59873;
+}
+
+.menu-category {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Assistant';
+  color: #d1d1d1;
+  margin: 0 0 30px 0;
+}
+
+.menu-container {
+  padding: 0 8% 0 12%;
+}
+
+.menu-container #menu {
+  height: auto;
+  margin: 0 auto;
+  overflow: auto;
+  text-align: center;
+  color: #3a3a3a;
+  overflow: hidden;
+}
+
+.menu-container #menu .menu-entry {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.menu-container #menu .item-name {
+  font-family: 'Catamaran';
+  font-weight: 800;
+}
+
+.menu-container #menu .item-text {
+  color: #d1d1d1;
+  font-size: 12px;
+  width: 85%;
+}
+
+.menu-container #menu .item-price {
+  position: absolute;
+  font-family: 'Voyage';
+  font-size: 30px;
+  color: #b59873;
+  right: 20px;
+  bottom: 20px;
+}
+
+#main-footer {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+#main-footer .footer-brand {
+  font-family: 'Voyage';
+  font-size: 50px;
+  text-align: center;
+}
+
+#main-footer h5 {
+  font-family: 'Assistant';
+}
+
+#main-footer ul {
+  padding: 0;
+}
+
+#main-footer li {
+  font-family: 'Catamaran';
+  font-size: 12px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+#main-footer .contact-button {
+  background-color: #b59873;
+  border: 1px solid #b59873;
+  border-radius: 25px;
+  color: white;
+  font-family: 'Assistant';
+  padding: 10px 50px;
+  transition: 0.2s;
+}
+
+#main-footer .contact-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+@media (max-width: 575px) {
+  #main-footer h5 {
+    font-size: 30px;
+  }
+  #main-footer .footer-info {
+    text-align: center;
+  }
+  #main-footer .footer-about li {
+    padding: 15px 0;
+  }
+  #main-footer .footer-about li:nth-child(n) {
+    background-color: #353535;
+  }
+  #main-footer .footer-about li:nth-child(n):hover {
+    background-color: #3f3f3f;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 768px) {
+  #main-footer .contact-button {
+    display: none;
+  }
+}
+
+.copyright {
+  height: 50px;
+  background-color: #2d2d2d;
+  color: white;
+  font-family: 'Catamaran';
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 50px;
+}
+/*# sourceMappingURL=main.css.map */

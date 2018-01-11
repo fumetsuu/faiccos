@@ -1,0 +1,427 @@
+@font-face
+    font-family: 'Voyage'
+    src: url('../assets/Voyage Regular.otf')
+
+@import 'vars'
+
+body
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+    color: white
+    &:hover
+        color: $gold
+
+.cheap-spacer
+    height: 280px
+    width: 280px
+    background-image: url("../assets/seperatoe.png")
+    background-size: contain
+    background-repeat: no-repeat
+    margin: 0 auto
+
+.main-nav
+    position: absolute
+    width: 100%
+    background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0)) !important
+
+    .navbar-brand
+        color: white !important
+        font-family: 'Voyage'
+        font-size: 50px
+        margin-left: 10px
+
+    .navbar-toggler
+        background-color: white
+
+    .nav-item
+        margin: 0 15px
+        text-transform: uppercase
+        font-size: 12px
+        font-family: 'Raleway'
+        transition: 0.2s
+    
+    .nav-link
+        color: white !important
+        &:hover
+            color: $gold !important
+    
+    .dropdown-menu
+        background-color: transparent
+        border: none
+        font-size: 12px
+        font-family: 'Raleway'
+        padding: 0
+        
+        .dropdown-item
+            color: white
+            padding: 0
+            margin: 0 0 10px 10px
+            &:hover
+                background-color: transparent
+                color: $gold
+
+#landing-page
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+    .landing-background
+        background-image: url("../assets/main-bg.jpg")
+        background-size: cover
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1000
+        width: 100%
+        height: 100%
+
+    .faiccos
+        color: white
+        font-family: 'Voyage'
+        font-size: 8rem
+        text-align: center
+        margin-top: 30vh
+        margin-bottom: -40px
+
+    .subtitle
+        color: white
+        text-transform: uppercase
+        font-family: 'Karla'
+        letter-spacing: 1rem
+        text-align: center
+        font-size: 3rem
+
+    @media (max-width: 500px)
+        .faiccos
+            font-size: 6rem
+
+        .subtitle
+            font-size: 1rem
+            letter-spacing: 0.5rem
+
+#resabout
+    height: auto
+    color: $grey
+
+    .reservation-text
+        padding: 0
+        margin: 0
+        text-align: center
+        height: 350px
+        background-color: $lighter-grey
+
+        p
+            margin: 20px
+            font-family: 'Catamaran'
+
+    .header-title
+        font-family: 'Voyage'
+        font-size: 50px
+        text-align: center
+        margin-top: 25px
+
+    .book-table
+        margin: 10px 0 30px 0
+        border: 3px solid lighten($gold, 10%)
+        text-transform: uppercase
+        color: $gold
+        letter-spacing: 1.5px
+        font-family: 'Assistant'
+        padding: 10px 30px
+        background-color: transparent
+        transition: 0.2s
+        &:hover
+            cursor: pointer
+            border-color: $gold
+            background-color: $gold !important
+            color: white
+
+    .reservation-img
+        background-image: url("../assets/image-1.jpg")
+        background-size: cover
+        background-position-y: center
+        height: 350px
+
+    .about-text
+        padding: 0 20px
+        margin: 0
+        text-align: center
+        height: auto
+        background-color: $lighter-grey
+
+        p
+            margin: 20px
+            font-family: 'Catamaran'
+
+    .about-img
+        background-image: url("../assets/image-2.jpg")
+        background-size: cover
+        background-position-y: center
+        height: 350px
+
+    @media (min-width: 575px) and (max-width: 768px)
+        .about-text
+            font-size: 12px
+
+    @media (max-width: 575px)
+        .reservation-img
+            display: none
+        
+        .about-img
+            display: none
+
+        .reservation-text
+            height: auto
+
+.spec-background
+    height: 500px
+    background-image: url("../assets/bg-2.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+
+    .specialties
+        color: white
+        font-family: 'Karla'
+        text-transform: uppercase
+        letter-spacing: 0.8rem
+        font-size: 3rem
+        text-align: center
+        line-height: 500px
+
+    @media (max-width: 575px)
+        .specialties
+            letter-spacing: 0.3rem
+            font-size: 1.5rem
+
+#spec-display
+    height: auto
+    color: $grey
+
+    .spec-image
+        margin: 0
+        background-size: cover
+        background-repeat: no-repeat
+        background-position-y: center
+
+    .spec-text
+        margin: 0
+        text-align: center
+        height: 250px
+        background-color: $lighter-grey
+
+        .spec-title
+            font-family: 'Archivo Black'
+            font-weight: 800
+            text-transform: uppercase
+            font-size: 20px
+            margin-top: 25px
+
+        p
+            margin: 12px
+            font-family: 'Catamaran'
+    
+        .from-price
+            font-family: 'Assistant'
+            color: $gold
+            text-transform: uppercase
+
+    .lasagna-image
+        background-image: url("../assets/lasagna.jpg")
+    
+    .eggplant-image
+        background-image: url("../assets/eggplant.jpg")
+
+    .braciole-image
+        background-image: url("../assets/braciole.jpg")
+
+    .spaghetti-image
+        background-image: url("../assets/spaghetti.jpg")
+
+    @media (max-width: 575px)
+        .spec-image
+            display: none
+            
+        .spec-text
+            background-color: rgba(0,0,0,0.6)
+            color: white
+            height: 300px
+
+            .spec-title
+                margin: 65px 0 0 0
+
+        .sm-img
+            background-position-y: center
+            background-size: cover
+            background-repeat: no-repeat
+            height: 100%
+            width: 100%
+            position: absolute
+            left: 0
+            z-index: -1000
+
+        .sm-img-lasagna
+            background-image: url("../assets/lasagna.jpg")
+
+        .sm-img-eggplant
+            background-image: url("../assets/eggplant.jpg")
+
+        .sm-img-braciole
+            background-image: url("../assets/braciole.jpg")
+        
+        .sm-img-spaghetti
+            background-image: url("../assets/spaghetti.jpg")
+
+    @media (min-width: 768px) and (max-width: 900px)
+        .spec-text
+            font-size: 13px
+
+.pre-menu-background
+    height: 400px
+    background-image: url("../assets/bg-3.jpg")
+    background-size: cover
+    background-position-y: center
+    background-repeat: no-repeat
+    
+    .food
+        color: white
+        font-family: 'Karla'
+        text-transform: uppercase
+        letter-spacing: 0.8rem
+        font-size: 3rem
+        text-align: center
+        line-height: 400px
+
+    @media (max-width: 575px)
+        .food
+            letter-spacing: 0.3rem
+            font-size: 1.5rem
+
+.menu-container-fluid
+    padding: 0 !important
+    overflow: auto
+
+.menu-bg
+    background-image: url("../assets/bg-menu.jpg")
+    height: 1050px
+    width: 100%
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    position: absolute
+    z-index: -1000
+
+.menu-title
+    text-align: center
+    font-family: 'Voyage'
+    font-size: 3rem
+    margin: 50px auto
+    width: 100px
+    position: relative
+    border-bottom: 1px solid $gold
+
+.menu-category
+    text-align: center
+    text-transform: uppercase
+    font-family: 'Assistant'
+    color: $light-grey
+    margin: 0 0 30px 0
+
+.menu-container
+    padding: 0 8% 0 12%
+
+    #menu
+        height: auto
+        margin: 0 auto
+        overflow: auto
+        text-align: center
+        color: $grey
+        overflow: hidden
+            
+        .menu-entry
+            text-align: left
+            margin: 20px 0
+
+        .item-name
+            font-family: 'Catamaran'
+            font-weight: 800
+
+        .item-text
+            color: $light-grey
+            font-size: 12px
+            width: 85%
+
+        .item-price
+            position: absolute
+            font-family: 'Voyage'
+            font-size: 30px
+            color: $gold
+            right: 20px
+            bottom: 20px
+
+#main-footer
+    background-color: $grey
+    color: white
+    padding: 25px
+    margin-top: 50px
+
+    .footer-brand
+        font-family: 'Voyage'
+        font-size: 50px
+        text-align: center
+
+    h5
+        font-family: 'Assistant'
+
+    ul
+        padding: 0
+
+    li
+        font-family: 'Catamaran'
+        font-size: 12px
+        margin-bottom: 10px
+        list-style-type: none
+
+    .contact-button
+        background-color: $gold
+        border: 1px solid $gold
+        border-radius: 25px
+        color: white
+        font-family: 'Assistant'
+        padding: 10px 50px
+        transition: 0.2s
+        &:hover
+            cursor: pointer
+            opacity: 0.7
+
+
+    @media (max-width: 575px)
+        h5
+            font-size: 30px
+
+        .footer-info
+            text-align: center
+
+        .footer-about
+            li
+                padding: 15px 0
+
+            li:nth-child(n)
+                background-color: darken($grey,2%)
+                &:hover
+                    background-color: lighten($grey, 2%)
+
+    @media (min-width: 575px) and (max-width: 768px)
+        .contact-button
+            display: none
+
+.copyright
+    height: 50px
+    background-color: darken($grey, 5%)
+    color: white
+    font-family: 'Catamaran'
+    letter-spacing: 1px
+    text-align: center
+    line-height: 50px
