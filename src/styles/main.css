@@ -31,6 +31,7 @@ a:hover {
 
 .main-nav {
   position: absolute;
+  z-index: 100000;
   width: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), transparent) !important;
 }
@@ -129,7 +130,6 @@ a:hover {
 .rescontainer {
   width: 90%;
   margin-top: -50px;
-  position: relative;
   overflow: visible;
 }
 
@@ -177,6 +177,7 @@ a:hover {
   padding: 10px 30px;
   background-color: transparent;
   transition: 0.2s;
+  outline: none;
 }
 
 #resabout .book-table:hover {
@@ -215,7 +216,7 @@ a:hover {
 
 @media (min-width: 575px) and (max-width: 768px) {
   #resabout .about-text {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -257,7 +258,6 @@ a:hover {
 .speccontainer {
   width: 90%;
   margin-top: -50px;
-  position: relative;
   overflow: visible;
 }
 
@@ -512,6 +512,7 @@ a:hover {
   font-family: 'Assistant';
   padding: 10px 50px;
   transition: 0.2s;
+  outline: none;
 }
 
 #main-footer .contact-button:hover {
