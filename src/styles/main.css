@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Voyage";
+  src: url("../assets/Voyage.woff");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,15 +15,6 @@ a {
 
 a:hover {
   color: #b59873;
-}
-
-.cheap-spacer {
-  height: 280px;
-  width: 280px;
-  background-image: url("../assets/seperatoe.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: 0 auto;
 }
 
 .parallax-bg {
@@ -335,6 +331,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     height: 300px;
+    animation: none !important;
   }
   #spec-display .spec-text .spec-title {
     margin: 65px 0 0 0;
@@ -415,6 +412,12 @@ a:hover {
   background-size: cover;
   position: absolute;
   z-index: -1000;
+}
+
+@media (max-width: 575px) {
+  .menu-bg {
+    display: none;
+  }
 }
 
 .menu-title {

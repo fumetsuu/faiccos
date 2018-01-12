@@ -1,3 +1,7 @@
+@font-face 
+    font-family: "Voyage";
+    src: url("../assets/Voyage.woff")
+        
 @import 'vars'
 
 body
@@ -9,14 +13,6 @@ a
     color: white
     &:hover
         color: $gold
-
-.cheap-spacer
-    height: 280px
-    width: 280px
-    background-image: url("../assets/seperatoe.png")
-    background-size: contain
-    background-repeat: no-repeat
-    margin: 0 auto
 
 .parallax-bg
     background-attachment: fixed;
@@ -278,6 +274,7 @@ a
             background-color: rgba(0,0,0,0.6)
             color: white
             height: 300px
+            animation: none !important
 
             .spec-title
                 margin: 65px 0 0 0
@@ -348,6 +345,10 @@ a
     background-size: cover
     position: absolute
     z-index: -1000
+
+@media (max-width: 575px)
+    .menu-bg
+        display: none
 
 .menu-title
     text-align: center
